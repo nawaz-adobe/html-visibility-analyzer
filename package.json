@@ -1,0 +1,67 @@
+{
+  "name": "html-visibility-analyzer",
+  "version": "1.0.0",
+  "description": "Analyze HTML content visibility for AI crawlers and citations - compare static HTML vs fully rendered content",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./browser": {
+      "import": "./dist/browser.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "html",
+    "content-analysis",
+    "ai-visibility",
+    "web-scraping",
+    "citation",
+    "llm",
+    "diff",
+    "lcs",
+    "web-crawling",
+    "seo"
+  ],
+  "author": "Adobe",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe/html-visibility-analyzer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adobe/html-visibility-analyzer/issues"
+  },
+  "homepage": "https://github.com/adobe/html-visibility-analyzer#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "jsdom": "^27.0.0",
+    "rollup": "^4.9.6",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
+
